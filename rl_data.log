@@ -1,0 +1,837 @@
+random action 
+updating q value for state action  [80, 1] 
+Game End Reward 9.343841360766286 
+random action 
+updating q value for state action  [60, 2] 
+Game End Reward 39.55378395392297 
+random action 
+updating q value for state action  [40, 3] 
+Game End Reward 9.171866128855822 
+random action 
+updating q value for state action  [20, 3] 
+Game End Reward 21.51351721025024 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 25.97829540343922 
+random action 
+updating q value for state action  [100, 3] 
+Game End Reward 12.642061703331333 
+random action 
+updating q value for state action  [0, 3] 
+Game End Reward 24.0739131507851 
+random action 
+updating q value for state action  [80, 1] 
+Game End Reward 9.77947204108604 
+greedy action 
+updating q value for state action  [60, 2] 
+Game End Reward 10.291875822441826 
+random action 
+updating q value for state action  [40, 5] 
+Game End Reward 26.073436509262574 
+random action 
+updating q value for state action  [20, 6] 
+Game End Reward 26.111856563287922 
+random action 
+updating q value for state action  [120, 4] 
+Game End Reward 20.73612301738786 
+random action 
+updating q value for state action  [100, 5] 
+Game End Reward 38.50634490474235 
+random action 
+updating q value for state action  [0, 5] 
+Game End Reward 21.47826750436422 
+greedy action 
+updating q value for state action  [80, 1] 
+Game End Reward 5.739564362360942 
+random action 
+updating q value for state action  [60, 2] 
+Game End Reward 8.723105936252374 
+random action 
+updating q value for state action  [40, 1] 
+Game End Reward 6.57878944265639 
+random action 
+updating q value for state action  [20, 6] 
+Game End Reward 33.45085540847236 
+random action 
+updating q value for state action  [120, 2] 
+Game End Reward 8.701748547923351 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 25.635421778247775 
+random action 
+updating q value for state action  [0, 4] 
+Game End Reward 20.377970843248697 
+random action 
+updating q value for state action  [80, 6] 
+Game End Reward 25.945856382451446 
+random action 
+updating q value for state action  [60, 2] 
+Game End Reward 13.346742576890506 
+random action 
+updating q value for state action  [40, 5] 
+Game End Reward 24.583667171730816 
+random action 
+updating q value for state action  [20, 6] 
+Game End Reward 27.43310764239817 
+random action 
+updating q value for state action  [120, 6] 
+Game End Reward 26.735366793536237 
+random action 
+updating q value for state action  [100, 4] 
+Game End Reward 11.87373495758947 
+random action 
+updating q value for state action  [0, 2] 
+Game End Reward 20.796053300278896 
+greedy action 
+updating q value for state action  [80, 6] 
+Game End Reward 37.67003492592088 
+random action 
+updating q value for state action  [60, 4] 
+Game End Reward 23.79980936156216 
+greedy action 
+updating q value for state action  [40, 5] 
+Game End Reward 16.492668394450746 
+greedy action 
+updating q value for state action  [20, 6] 
+Game End Reward 27.071860908778245 
+random action 
+updating q value for state action  [120, 4] 
+Game End Reward 28.980359785091927 
+random action 
+updating q value for state action  [100, 1] 
+Game End Reward 35.4792182296936 
+random action 
+random action 
+updating q value for state action  [80, 3] 
+Game End Reward 24.20579526448255 
+random action 
+updating q value for state action  [60, 4] 
+Game End Reward 25.3143829085635 
+random action 
+updating q value for state action  [40, 4] 
+Game End Reward 22.07637811064836 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 22.336656682670984 
+random action 
+updating q value for state action  [120, 4] 
+Game End Reward 25.02488673335916 
+greedy action 
+updating q value for state action  [100, 5] 
+Game End Reward 28.54866883419926 
+random action 
+updating q value for state action  [0, 4] 
+Game End Reward 20.007031050626903 
+random action 
+updating q value for state action  [80, 1] 
+Game End Reward 31.30026857865581 
+random action 
+updating q value for state action  [60, 4] 
+Game End Reward 30.207075977036002 
+random action 
+updating q value for state action  [40, 3] 
+Game End Reward 27.978445237213187 
+random action 
+updating q value for state action  [20, 3] 
+Game End Reward 25.77975788557736 
+random action 
+updating q value for state action  [120, 4] 
+Game End Reward 30.39988652547522 
+random action 
+updating q value for state action  [100, 1] 
+Game End Reward 31.79688648873258 
+random action 
+updating q value for state action  [0, 1] 
+Game End Reward 27.180126896201344 
+random action 
+updating q value for state action  [80, 3] 
+Game End Reward 31.203872771374176 
+random action 
+updating q value for state action  [60, 4] 
+Game End Reward 29.760871304966045 
+random action 
+updating q value for state action  [40, 5] 
+Game End Reward 28.837195699871014 
+random action 
+updating q value for state action  [20, 6] 
+Game End Reward 26.944549167163768 
+random action 
+updating q value for state action  [120, 5] 
+Game End Reward 17.376569794205867 
+random action 
+updating q value for state action  [100, 4] 
+Game End Reward 29.92905503742468 
+random action 
+updating q value for state action  [0, 5] 
+Game End Reward 25.210638430874724 
+greedy action 
+updating q value for state action  [80, 6] 
+Game End Reward 30.109700824071833 
+random action 
+updating q value for state action  [60, 3] 
+Game End Reward 29.14433095146153 
+random action 
+updating q value for state action  [40, 3] 
+Game End Reward 29.083397346197465 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 24.905293284846262 
+random action 
+updating q value for state action  [120, 5] 
+Game End Reward 30.356353527545668 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 30.837819200314826 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 24.58165570125314 
+random action 
+updating q value for state action  [80, 6] 
+Game End Reward 29.390692505965927 
+random action 
+updating q value for state action  [60, 6] 
+Game End Reward 23.807046573787385 
+greedy action 
+updating q value for state action  [40, 5] 
+Game End Reward 20.171595693181338 
+random action 
+updating q value for state action  [20, 1] 
+Game End Reward 23.19160240161582 
+random action 
+updating q value for state action  [120, 2] 
+Game End Reward 26.378424476952947 
+random action 
+updating q value for state action  [100, 5] 
+Game End Reward 29.145441237004597 
+random action 
+updating q value for state action  [0, 4] 
+Game End Reward 20.128971572407934 
+random action 
+updating q value for state action  [80, 2] 
+Game End Reward 22.40520411676025 
+greedy action 
+updating q value for state action  [60, 4] 
+Game End Reward 27.870844837136648 
+random action 
+updating q value for state action  [40, 4] 
+Game End Reward 29.25228552532381 
+greedy action 
+updating q value for state action  [20, 6] 
+Game End Reward 26.097427601287087 
+greedy action 
+updating q value for state action  [120, 4] 
+Game End Reward 30.207829857879794 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 29.7040651947978 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 23.40789571349562 
+greedy action 
+updating q value for state action  [80, 6] 
+Game End Reward 30.13456244480689 
+greedy action 
+updating q value for state action  [60, 4] 
+Game End Reward 29.560664153409366 
+random action 
+updating q value for state action  [40, 2] 
+Game End Reward 28.819391859280312 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 27.380797527532224 
+greedy action 
+updating q value for state action  [120, 4] 
+Game End Reward 26.681551799725746 
+random action 
+random action 
+updating q value for state action  [80, 6] 
+Game End Reward 34.432929097311174 
+random action 
+updating q value for state action  [60, 1] 
+Game End Reward 42.12575528414885 
+random action 
+updating q value for state action  [40, 4] 
+Game End Reward 35.20371037581967 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 33.17678539143012 
+random action 
+updating q value for state action  [120, 6] 
+Game End Reward 40.037907321827014 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 40.22780601072451 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 28.298495781508805 
+random action 
+updating q value for state action  [80, 1] 
+Game End Reward 24.423559463168363 
+random action 
+updating q value for state action  [60, 3] 
+Game End Reward 36.16093597733551 
+random action 
+updating q value for state action  [40, 6] 
+Game End Reward 36.48251510288803 
+random action 
+updating q value for state action  [20, 1] 
+Game End Reward 30.958864396687893 
+random action 
+updating q value for state action  [120, 6] 
+Game End Reward 40.8349482441104 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 38.93334588146719 
+random action 
+updating q value for state action  [0, 6] 
+Game End Reward 28.54811956125932 
+random action 
+updating q value for state action  [80, 1] 
+Game End Reward 40.23895502893038 
+random action 
+updating q value for state action  [60, 3] 
+Game End Reward 36.795828399826675 
+random action 
+updating q value for state action  [40, 5] 
+Game End Reward 33.94940433827703 
+random action 
+updating q value for state action  [20, 2] 
+Game End Reward 29.724681400928116 
+random action 
+updating q value for state action  [120, 6] 
+Game End Reward 37.75093865807377 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 39.43881577244646 
+random action 
+updating q value for state action  [0, 6] 
+Game End Reward 28.093033847843778 
+random action 
+updating q value for state action  [80, 6] 
+Game End Reward 37.57860097180023 
+random action 
+updating q value for state action  [60, 1] 
+Game End Reward 38.286010489230044 
+random action 
+updating q value for state action  [40, 4] 
+Game End Reward 33.43944597922111 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 32.02358274995137 
+random action 
+updating q value for state action  [120, 6] 
+Game End Reward 39.18165309247461 
+random action 
+updating q value for state action  [100, 1] 
+Game End Reward 38.708691230023035 
+random action 
+updating q value for state action  [0, 1] 
+Game End Reward 35.744177504616836 
+random action 
+updating q value for state action  [80, 3] 
+Game End Reward 36.56859826012678 
+random action 
+updating q value for state action  [60, 5] 
+Game End Reward 35.59822284752898 
+random action 
+updating q value for state action  [40, 1] 
+Game End Reward 37.5184032020784 
+random action 
+updating q value for state action  [20, 1] 
+Game End Reward 33.25243653825826 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 39.07417228995576 
+greedy action 
+updating q value for state action  [100, 6] 
+Game End Reward 37.656402872991094 
+random action 
+updating q value for state action  [0, 2] 
+Game End Reward 30.159964219097624 
+random action 
+updating q value for state action  [80, 3] 
+Game End Reward 35.811202709578446 
+random action 
+updating q value for state action  [60, 1] 
+Game End Reward 40.052408724935596 
+random action 
+updating q value for state action  [40, 3] 
+Game End Reward 36.97482319040136 
+random action 
+updating q value for state action  [20, 3] 
+Game End Reward 31.323829300099682 
+random action 
+updating q value for state action  [120, 5] 
+Game End Reward 29.977208591102315 
+random action 
+updating q value for state action  [100, 5] 
+Game End Reward 38.76876839830445 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 26.61938060162802 
+random action 
+updating q value for state action  [80, 3] 
+Game End Reward 39.08538674142474 
+random action 
+updating q value for state action  [60, 3] 
+Game End Reward 37.03510534092006 
+random action 
+updating q value for state action  [40, 5] 
+Game End Reward 35.920255685123465 
+random action 
+updating q value for state action  [20, 2] 
+Game End Reward 34.01793117192189 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 38.97113655464847 
+random action 
+updating q value for state action  [100, 4] 
+Game End Reward 36.68114754382258 
+random action 
+updating q value for state action  [0, 1] 
+Game End Reward 40.07092632222562 
+random action 
+updating q value for state action  [80, 5] 
+Game End Reward 37.338657965781145 
+random action 
+updating q value for state action  [60, 6] 
+Game End Reward 36.94025728990717 
+greedy action 
+updating q value for state action  [40, 5] 
+Game End Reward 34.894276912487975 
+random action 
+updating q value for state action  [20, 2] 
+Game End Reward 35.75050735625988 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 39.5520992561246 
+greedy action 
+updating q value for state action  [100, 6] 
+Game End Reward 38.851317543217505 
+random action 
+updating q value for state action  [0, 3] 
+Game End Reward 31.180405791671404 
+greedy action 
+updating q value for state action  [80, 6] 
+Game End Reward 39.42797796230083 
+random action 
+updating q value for state action  [60, 6] 
+Game End Reward 38.04669652079543 
+random action 
+updating q value for state action  [40, 5] 
+Game End Reward 33.10071644304248 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 32.62783867071031 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 39.356727302139326 
+greedy action 
+updating q value for state action  [100, 6] 
+Game End Reward 39.01816854829009 
+random action 
+updating q value for state action  [0, 5] 
+Game End Reward 28.576361281496272 
+greedy action 
+updating q value for state action  [80, 6] 
+Game End Reward 38.4433779389518 
+greedy action 
+updating q value for state action  [60, 4] 
+Game End Reward 36.8179987209884 
+greedy action 
+updating q value for state action  [40, 5] 
+Game End Reward 36.54985873487747 
+greedy action 
+updating q value for state action  [20, 5] 
+Game End Reward 33.93393621541946 
+random action 
+updating q value for state action  [120, 4] 
+Game End Reward 39.69728580366836 
+greedy action 
+updating q value for state action  [100, 6] 
+Game End Reward 39.70001285770568 
+random action 
+updating q value for state action  [0, 2] 
+Game End Reward 28.985524873638077 
+random action 
+updating q value for state action  [80, 1] 
+Game End Reward 39.64811415118043 
+random action 
+updating q value for state action  [60, 5] 
+Game End Reward 33.19554570417451 
+random action 
+updating q value for state action  [40, 4] 
+Game End Reward 36.01958423199125 
+random action 
+updating q value for state action  [20, 5] 
+Game End Reward 32.87626663401947 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 39.17071485151373 
+random action 
+updating q value for state action  [100, 6] 
+Game End Reward 39.202889961795144 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 29.54944241270548 
+greedy action 
+updating q value for state action  [80, 6] 
+Game End Reward 36.67599176659837 
+random action 
+updating q value for state action  [60, 3] 
+Game End Reward 32.10898447765345 
+greedy action 
+updating q value for state action  [40, 5] 
+Game End Reward 36.490635886329876 
+greedy action 
+updating q value for state action  [20, 5] 
+Game End Reward 33.60016662680288 
+random action 
+updating q value for state action  [120, 4] 
+Game End Reward 39.308886539614264 
+greedy action 
+updating q value for state action  [100, 6] 
+Game End Reward 38.44247925738107 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 27.827213094959287 
+random action 
+updating q value for state action  [100, 4] 
+Game End Reward 19.806996532648824 
+greedy action 
+updating q value for state action  [699.3157867655627, 6] 
+Game End Reward 18.00439053961515 
+greedy action 
+updating q value for state action  [699.3157867655627, 6] 
+Game End Reward 13.414064051444504 
+random action 
+updating q value for state action  [836.2510309503735, 6] 
+Game End Reward 38.50527733826115 
+random action 
+updating q value for state action  [699.3157867655627, 1] 
+Game End Reward 29.04569700213011 
+random action 
+updating q value for state action  [584.8035476425734, 4] 
+Game End Reward 29.999187133880195 
+random action 
+updating q value for state action  [489.04256961953797, 4] 
+Game End Reward 29.84549245283512 
+random action 
+updating q value for state action  [408.96235302295804, 4] 
+Game End Reward 28.84531293476801 
+random action 
+updating q value for state action  [341.9951893353393, 2] 
+Game End Reward 29.626787015138916 
+random action 
+updating q value for state action  [285.99382966174574, 4] 
+Game End Reward 23.870131875524635 
+random action 
+updating q value for state action  [239.16263490008038, 3] 
+Game End Reward 22.363048088065316 
+greedy action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 27.202610970202407 
+random action 
+updating q value for state action  [180, 6] 
+Game End Reward 23.841481096250405 
+random action 
+updating q value for state action  [160, 1] 
+Game End Reward 26.842176615648285 
+random action 
+updating q value for state action  [140, 1] 
+Game End Reward 25.86421616861459 
+random action 
+updating q value for state action  [1000.0, 2] 
+Game End Reward 32.428821326838985 
+random action 
+updating q value for state action  [836.2510309503735, 3] 
+Game End Reward 17.074507035071065 
+random action 
+updating q value for state action  [699.3157867655627, 5] 
+Game End Reward 18.34999937469025 
+random action 
+updating q value for state action  [584.8035476425734, 1] 
+Game End Reward 16.37890164033055 
+random action 
+updating q value for state action  [489.04256961953797, 6] 
+Game End Reward 18.34348175134539 
+random action 
+updating q value for state action  [408.96235302295804, 6] 
+Game End Reward 16.32299595174137 
+greedy action 
+updating q value for state action  [341.9951893353393, 2] 
+Game End Reward 23.31607357307069 
+random action 
+updating q value for state action  [285.99382966174574, 1] 
+Game End Reward 17.469664385725086 
+random action 
+updating q value for state action  [239.16263490008038, 3] 
+Game End Reward 20.005411976366645 
+random action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 17.69879600630414 
+random action 
+updating q value for state action  [180, 3] 
+Game End Reward 19.506276410795305 
+random action 
+updating q value for state action  [160, 5] 
+Game End Reward 19.782007608985634 
+greedy action 
+updating q value for state action  [140, 1] 
+Game End Reward 15.7799327553571 
+random action 
+updating q value for state action  [1000.0, 3] 
+Game End Reward 19.91889447979771 
+random action 
+updating q value for state action  [836.2510309503735, 5] 
+Game End Reward 16.743952707608678 
+greedy action 
+updating q value for state action  [699.3157867655627, 1] 
+Game End Reward 16.003764138686183 
+random action 
+updating q value for state action  [584.8035476425734, 6] 
+Game End Reward 18.920743925908898 
+greedy action 
+updating q value for state action  [489.04256961953797, 4] 
+Game End Reward 18.828001759410096 
+random action 
+updating q value for state action  [408.96235302295804, 2] 
+Game End Reward 17.39678237016604 
+random action 
+updating q value for state action  [341.9951893353393, 2] 
+Game End Reward 18.60084815705456 
+random action 
+updating q value for state action  [285.99382966174574, 3] 
+Game End Reward 18.662900307982653 
+greedy action 
+updating q value for state action  [239.16263490008038, 3] 
+Game End Reward 19.646569667263467 
+random action 
+updating q value for state action  [200.00000000000003, 1] 
+Game End Reward 17.15608413371681 
+greedy action 
+updating q value for state action  [180, 6] 
+Game End Reward 17.01428572517141 
+random action 
+updating q value for state action  [160, 5] 
+Game End Reward 16.38535842317867 
+greedy action 
+updating q value for state action  [140, 1] 
+Game End Reward 20.238056933645034 
+random action 
+updating q value for state action  [1000.0, 1] 
+Game End Reward 17.2255590655202 
+random action 
+updating q value for state action  [836.2510309503735, 3] 
+Game End Reward 19.15645545792034 
+greedy action 
+updating q value for state action  [699.3157867655627, 1] 
+Game End Reward 19.149821050398586 
+random action 
+updating q value for state action  [584.8035476425734, 3] 
+Game End Reward 22.527344785723763 
+greedy action 
+updating q value for state action  [489.04256961953797, 4] 
+Game End Reward 18.397330257528917 
+random action 
+updating q value for state action  [408.96235302295804, 4] 
+Game End Reward 18.98634197110436 
+random action 
+updating q value for state action  [341.9951893353393, 1] 
+Game End Reward 16.277432568151507 
+random action 
+updating q value for state action  [285.99382966174574, 2] 
+Game End Reward 21.690971999144708 
+greedy action 
+updating q value for state action  [239.16263490008038, 3] 
+Game End Reward 19.349802193868175 
+greedy action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 18.329524259268197 
+greedy action 
+updating q value for state action  [180, 6] 
+Game End Reward 17.609010391688432 
+random action 
+updating q value for state action  [160, 1] 
+Game End Reward 20.20931924836193 
+random action 
+updating q value for state action  [140, 4] 
+Game End Reward 16.351481860210182 
+greedy action 
+updating q value for state action  [1000.0, 2] 
+Game End Reward 20.23285231701408 
+random action 
+updating q value for state action  [836.2510309503735, 4] 
+Game End Reward 15.029651898524047 
+random action 
+updating q value for state action  [699.3157867655627, 1] 
+Game End Reward 16.89065586470211 
+random action 
+updating q value for state action  [584.8035476425734, 1] 
+Game End Reward 13.181009810477478 
+greedy action 
+updating q value for state action  [489.04256961953797, 4] 
+Game End Reward 17.996216380301547 
+greedy action 
+updating q value for state action  [408.96235302295804, 4] 
+Game End Reward 21.355771684764736 
+random action 
+updating q value for state action  [341.9951893353393, 1] 
+Game End Reward 17.770802783904028 
+random action 
+updating q value for state action  [285.99382966174574, 3] 
+Game End Reward 23.714839817658593 
+random action 
+updating q value for state action  [239.16263490008038, 2] 
+Game End Reward 24.00564784366897 
+greedy action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 17.67492268512957 
+greedy action 
+updating q value for state action  [180, 6] 
+Game End Reward 23.174198079588912 
+random action 
+updating q value for state action  [160, 1] 
+Game End Reward 16.89619924497378 
+random action 
+updating q value for state action  [140, 2] 
+Game End Reward 19.286547369466007 
+greedy action 
+updating q value for state action  [1000.0, 2] 
+Game End Reward 23.82112992552769 
+random action 
+updating q value for state action  [836.2510309503735, 1] 
+Game End Reward 16.950307190697956 
+greedy action 
+updating q value for state action  [699.3157867655627, 1] 
+Game End Reward 16.776805016210833 
+random action 
+updating q value for state action  [584.8035476425734, 5] 
+Game End Reward 20.39770287157264 
+random action 
+updating q value for state action  [489.04256961953797, 2] 
+Game End Reward 21.093829773782183 
+random action 
+updating q value for state action  [408.96235302295804, 1] 
+Game End Reward 20.94548230734246 
+random action 
+updating q value for state action  [341.9951893353393, 4] 
+Game End Reward 20.366265843146277 
+greedy action 
+updating q value for state action  [285.99382966174574, 3] 
+Game End Reward 21.9254186881289 
+random action 
+updating q value for state action  [239.16263490008038, 3] 
+Game End Reward 20.903398437417263 
+random action 
+updating q value for state action  [200.00000000000003, 3] 
+Game End Reward 19.29099680980261 
+random action 
+updating q value for state action  [180, 6] 
+Game End Reward 21.183134835652403 
+random action 
+updating q value for state action  [160, 2] 
+Game End Reward 20.61168730807495 
+random action 
+updating q value for state action  [140, 6] 
+Game End Reward 17.52653893326114 
+random action 
+updating q value for state action  [1000.0, 1] 
+Game End Reward 17.02409738541832 
+random action 
+updating q value for state action  [836.2510309503735, 2] 
+Game End Reward 21.56961130489339 
+random action 
+updating q value for state action  [699.3157867655627, 3] 
+Game End Reward 16.670399131562295 
+random action 
+updating q value for state action  [584.8035476425734, 1] 
+Game End Reward 12.932324926283536 
+random action 
+updating q value for state action  [489.04256961953797, 2] 
+Game End Reward 15.567153104752592 
+greedy action 
+updating q value for state action  [408.96235302295804, 4] 
+Game End Reward 20.23350822911776 
+greedy action 
+updating q value for state action  [341.9951893353393, 2] 
+Game End Reward 19.425944958286582 
+random action 
+updating q value for state action  [285.99382966174574, 3] 
+Game End Reward 16.812344865536737 
+random action 
+updating q value for state action  [239.16263490008038, 1] 
+Game End Reward 19.496855813676746 
+random action 
+updating q value for state action  [200.00000000000003, 1] 
+Game End Reward 14.047283899412426 
+random action 
+updating q value for state action  [180, 6] 
+Game End Reward 17.798367959979984 
+random action 
+updating q value for state action  [160, 2] 
+Game End Reward 11.928756269534096 
+random action 
+updating q value for state action  [140, 5] 
+Game End Reward 12.364943822630318 
+random action 
+updating q value for state action  [1000.0, 4] 
+Game End Reward 12.859574701517083 
+random action 
+updating q value for state action  [836.2510309503735, 2] 
+Game End Reward 12.86751887247064 
+random action 
+greedy action 
+updating q value for state action  [20, 5] 
+Game End Reward 37.612515810095275 
+greedy action 
+updating q value for state action  [120, 6] 
+Game End Reward 37.07021082198242 
+random action 
+updating q value for state action  [699.3157867655627, 1] 
+Game End Reward 21.110781665308835 
+greedy action 
+greedy action 
+updating q value for state action  [699.3157867655627, 6] 
+Game End Reward 39.54592339250181 
+greedy action 
+updating q value for state action  [60, 4] 
+Game End Reward 30.414523347525567 
+greedy action 
+updating q value for state action  [20, 4] 
+Game End Reward 0.3237217547165116 
+random action 
+greedy action 
+updating q value for state action  [408.96235302295804, 6] 
+Game End Reward 39.15015018302328 
+updating q value for state action  [408.96235302295804, 6] 
+Game End Reward 11.549983705919024 
+greedy action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 38.27757638032055 
+greedy action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 0.45900560418337677 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 22.89970652337709 
+random action 
+updating q value for state action  [0, 2] 
+Game End Reward 25.001924521798692 
+greedy action 
+updating q value for state action  [200.00000000000003, 6] 
+Game End Reward 20.810752034320547 
+random action 
+updating q value for state action  [0, 6] 
+Game End Reward 22.11197248879304 
+greedy action 
+greedy action 
+updating q value for state action  [0, 5] 
+Game End Reward 3.980310560666731 
+random action 
+updating q value for state action  [0, 6] 
+Game End Reward 97.88688411516314 
+updating q value for state action  [0, 6] 
+updating q value for state action  [0, 6] 
+Game End Reward 6.968632602729431 
+Game End Reward 10.839910010946383 
