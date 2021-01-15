@@ -1,27 +1,34 @@
 package com.example.android.syncx;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.ClipData;
-import com.example.SyncX.R;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.example.SyncX.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.content.ClipData;
+
+import android.content.Context;
+import android.database.Cursor;
 import android.os.ParcelFileDescriptor;
 import android.provider.OpenableColumns;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -35,8 +42,9 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class Fragment1 extends Fragment {
     static final int SocketServerPORT = 8080;
     String dstAddress;
     int dstPort;
@@ -50,86 +58,118 @@ public class MainActivity extends AppCompatActivity {
     int id_count = 0;
     int file_count = 0;
     List<Uri> jobs=new LinkedList<>();
-
     DataOutputStream permanent_input;
     Hashtable<Integer, String> id_to_file_to_be_wrote=new Hashtable<>();
     Hashtable<String, Uri> getId_to_file_to_be_send=new Hashtable<>();
-
-    LinearLayout loginPanel;
-
+    ConstraintLayout loginPanel;
     EditText editTextUserName, editTextAddress;
     Button buttonConnect;
     TextView  textPort;
-
     Button buttonSend;
-
     String msgLog = "";
     String textAddress="";
     PermanentClient permanentClient = null;
     Intent myFileIntent;
     SharedPreferences sharedpreferences;
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_items, menu);
-        return true;
+    public Fragment1() {
     }
-
+    public static Fragment1 newInstance(String param1, String param2) {
+        Fragment1 fragment = new Fragment1();
+        return fragment;
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_items, menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.app_bar_switch){
-            Toast.makeText(getApplicationContext(),"APP BAR SWITCH",Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(),"APP BAR SWITCH",Toast.LENGTH_LONG).show();
         }
         return super.onOptionsItemSelected(item);
     }
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        loginPanel = (LinearLayout)findViewById(R.id.loginpanel);
-        editTextAddress = (EditText) findViewById(R.id.address);
-        textPort = (TextView) findViewById(R.id.port);
-        textPort.setText("port: " + SocketServerPORT);
-        buttonConnect = (Button) findViewById(R.id.connect);
-        sharedpreferences = getSharedPreferences("mypref",
-                Context.MODE_PRIVATE);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        Bundle bundle = getArguments();
+        if(bundle!=null)
+        {
+            String strtext = bundle.getString("key");
+            editTextAddress.setText(strtext);
+        }
+        View view = inflater.inflate(R.layout.fragment_1, container, false);
+        setHasOptionsMenu(true);
+        return view;
+    }
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        View view = getView();
+        loginPanel = view.findViewById(R.id.loginpanel);
+        editTextAddress = (EditText)view.findViewById(R.id.address);
+        Bundle extras = getActivity().getIntent().getExtras();
+        if(extras!=null)
+        {
+            String adr = (extras.getString("key"));
+            editTextAddress.setText(adr);
+        }
+        textPort = (TextView)view.findViewById(R.id.port);
+        getActivity().findViewById(R.id.floatingActionButton).setVisibility(View.VISIBLE);
+        getActivity().findViewById(R.id.floatingActionButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),QRCodeScanActivity.class));
+            }
+        });
+        textPort.setText("Port: " + SocketServerPORT);
+        buttonConnect = (Button)view.findViewById(R.id.connect);
+        sharedpreferences = getActivity().getSharedPreferences("mypref", Context.MODE_PRIVATE);
         if (sharedpreferences.contains("ip")) {
             editTextAddress.setText(sharedpreferences.getString("ip", "192.168.43.204"));
         }
-
-        buttonSend  = findViewById(R.id.Send);
-        findViewById(R.id.scanbtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),QRCodeScanActivity.class));
-            }
-        });
-        buttonConnect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainTabs.class));
-            }
-        });
-//        buttonConnect.setOnClickListener(buttonConnectOnClickListener);
+        buttonSend  = view.findViewById(R.id.Send);
         intent_handling();
+        if(view != null) {
+            buttonSend.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    initiate_send(view);
+                }
+            });
+            getView().findViewById(R.id.scanbtn).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getActivity(),QRCodeScanActivity.class));
+                }
+            });
+            getView().findViewById(R.id.connect).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String textAddress = editTextAddress.getText().toString();
+                    if (textAddress.equals("")) {
+                        Toast.makeText(getActivity(), "Required Address",
+                                Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    dstAddress = textAddress;
+                    dstPort = SocketServerPORT;
 
+                    permanentClient = new PermanentClient(textAddress, SocketServerPORT);
+                    permanentClient.start();
+                }
+            });
+        }
     }
-
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
-
         SharedPreferences.Editor editor = sharedpreferences.edit();
         editor.putString("ip",editTextAddress.getText().toString());
-
 //        Log.d("ip_addr",editTextAddress.getText().toString());
-
         editor.apply();
-
-
     }
     private class Jobs_completer extends  Thread{
         Jobs_completer(){
@@ -137,7 +177,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             while (!jobs.isEmpty()) {
-
                 Uri file_path = jobs.get(0);
                 jobs.remove(0);
                 File_sender file_sender = new File_sender(file_path);
@@ -150,35 +189,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    View.OnClickListener buttonConnectOnClickListener = new View.OnClickListener() {
-
-        @Override
-
-
-        public void onClick(View v) {
-            String textUserName = editTextUserName.getText().toString();
-            if (textUserName.equals("")) {
-                Toast.makeText(MainActivity.this, "Enter User Name",
-                        Toast.LENGTH_LONG).show();
-                return;
-            }
-            String textAddress = editTextAddress.getText().toString();
-            if (textAddress.equals("")) {
-                Toast.makeText(MainActivity.this, "Enter Addresse",
-                        Toast.LENGTH_LONG).show();
-                return;
-            }
-            dstAddress = textAddress;
-            dstPort = SocketServerPORT;
-
-            permanentClient = new PermanentClient(textAddress, SocketServerPORT);
-            permanentClient.start();
-        }
-
-    };
     ProgressBar inflateProgressBar(int index_y,int size)
     {
-        LinearLayout place1=(LinearLayout) findViewById(R.id.main_container);
+        LinearLayout place1=(LinearLayout) getView().findViewById(R.id.main_container);
         while(place1.getChildCount()<index_y){
             getLayoutInflater().inflate(R.layout.container,place1);}
         LinearLayout container =(LinearLayout)place1.getChildAt(index_y-1);
@@ -187,18 +200,6 @@ public class MainActivity extends AppCompatActivity {
         return (ProgressBar) container.getChildAt(container.getChildCount()-1);
     }
     public void initiate_send(View view) {
-        String textUserName = editTextUserName.getText().toString();
-        if (textUserName.equals("")) {
-            Toast.makeText(MainActivity.this, "Enter User Name",
-                    Toast.LENGTH_LONG).show();
-            return;
-        }
-        textAddress = editTextAddress.getText().toString();
-        if (textAddress.equals("")) {
-            Toast.makeText(MainActivity.this, "Enter Addresse",
-                    Toast.LENGTH_LONG).show();
-            return;
-        }
         myFileIntent= new Intent(Intent.ACTION_GET_CONTENT);
         myFileIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,true);
         myFileIntent.setType("*/*");
@@ -206,37 +207,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void intent_handling(){
-        Intent intent = getIntent();
+        Intent intent = getActivity().getIntent();
         String action = intent.getAction();
         String type = intent.getType();
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             {
                 Uri single_uri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
-
                 jobs.add(single_uri);
             }
         } else if (Intent.ACTION_SEND_MULTIPLE.equals(action) && type != null) {
             {
-
                 ArrayList<Uri> imageUris = intent.getParcelableArrayListExtra(Intent.EXTRA_STREAM);
-
                 if (imageUris != null) {
                     jobs.addAll(imageUris);
                 }
-
             }
-        } else {
+        }  // Handle other intents, such as being started from the home screen
 
-
-            // Handle other intents, such as being started from the home screen
-        }
     }
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==10){
-
-            if(resultCode==RESULT_OK){
+            if(resultCode==getActivity().RESULT_OK){
                 try {
                     ClipData clipData = data.getClipData();
                     Log.d("nubmer",Integer.toString(clipData.getItemCount()));
@@ -256,13 +249,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     private String displayName(Uri uri) {
         Cursor mCursor =
-                getApplicationContext().getContentResolver().query(uri, null, null, null, null);
+                Objects.requireNonNull(getActivity()).getContentResolver().query(uri, null, null, null, null);
         assert mCursor != null;
-        int indexedname = mCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+        int indexed = mCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
         mCursor.moveToFirst();
-        String filename = mCursor.getString(indexedname);
+        String filename = mCursor.getString(indexed);
         mCursor.close();
         return filename;
     }
@@ -281,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             DataOutputStream dataOutputStream = permanent_input;
             try {
-                ParcelFileDescriptor file = getContentResolver().openFileDescriptor(sending_file_path,"r");
+                ParcelFileDescriptor file = Objects.requireNonNull(getActivity()).getContentResolver().openFileDescriptor(sending_file_path,"r");
                 file_size=file.getStatSize();
 
                 file_name = displayName(sending_file_path);
@@ -305,9 +299,6 @@ public class MainActivity extends AppCompatActivity {
                 dataOutputStream.write(name_size_bytes);
                 dataOutputStream.write(name_size_bytes);
                 getId_to_file_to_be_send.put(file_name,sending_file_path);
-
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -371,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
                 dataOutputStream.write(data_buffer_id);
                 dataOutputStream.write(starting_point_buffer);
                 dataOutputStream.write(file_size_buffer);
-                MainActivity.this.runOnUiThread(new Runnable() {
+                Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
@@ -382,9 +373,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 });
-                FileInputStream fis = (FileInputStream)getContentResolver().openInputStream(sending_file_path);
+                FileInputStream fis = (FileInputStream)getActivity().getContentResolver().openInputStream(sending_file_path);
                 remaining_size = file_size;
-
                 fis.skip(starting_point);
 
 
@@ -410,7 +400,7 @@ public class MainActivity extends AppCompatActivity {
                         file_percentage = (int) (((float)(file_size - remaining_size)/(float)file_size)*100.0);
 
 
-                        MainActivity.this.runOnUiThread(new Runnable() {
+                        getActivity().runOnUiThread(new Runnable() {
 
                             @Override
                             public void run() {
@@ -438,22 +428,22 @@ public class MainActivity extends AppCompatActivity {
             } catch (UnknownHostException e) {
                 e.printStackTrace();
                 final String eString = e.toString();
-                MainActivity.this.runOnUiThread(new Runnable() {
+                Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, eString, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), eString, Toast.LENGTH_LONG).show();
                     }
 
                 });
             } catch (IOException e) {
                 e.printStackTrace();
                 final String eString = e.toString();
-                MainActivity.this.runOnUiThread(new Runnable() {
+                Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, eString, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), eString, Toast.LENGTH_LONG).show();
                     }
 
                 });
@@ -543,13 +533,13 @@ public class MainActivity extends AppCompatActivity {
 
                 dataInputStream.readFully(temp_buffer);
                 name_of_file = id_to_file_to_be_wrote.get(data_id);
-                myExternal_file = new File(getExternalFilesDir(null),name_of_file);
+                myExternal_file = new File(getActivity().getExternalFilesDir(null),name_of_file);
                 if(!myExternal_file.exists()){
                     myExternal_file.createNewFile();
                 }
 
 
-                MainActivity.this.runOnUiThread(new Runnable() {
+                getActivity().runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
@@ -575,7 +565,7 @@ public class MainActivity extends AppCompatActivity {
                     raf.write(buffer,0,k);
                     remaining_file = remaining_file - k;
                     file_percentage = (int) (((float)(file_size - remaining_file)/(float)file_size)*100.0);
-                    MainActivity.this.runOnUiThread(new Runnable() {
+                    getActivity().runOnUiThread(new Runnable() {
 
                         @Override
                         public void run() {
@@ -590,25 +580,14 @@ public class MainActivity extends AppCompatActivity {
                 raf.close();
                 progressBar.setProgress(100);
 
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-                final String eString = e.toString();
-                MainActivity.this.runOnUiThread(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        Toast.makeText(MainActivity.this, eString, Toast.LENGTH_LONG).show();
-                    }
-
-                });
             } catch (IOException e) {
                 e.printStackTrace();
                 final String eString = e.toString();
-                MainActivity.this.runOnUiThread(new Runnable() {
+                getActivity().runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, eString, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), eString, Toast.LENGTH_LONG).show();
                     }
 
                 });
@@ -621,8 +600,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-
-
+                
                 if (dataInputStream != null) {
                     try {
                         dataInputStream.close();
@@ -661,7 +639,7 @@ public class MainActivity extends AppCompatActivity {
 
                 permanent_input = dataOutputStream;
                 dataOutputStream.writeBytes(acknowledgement);
-                runOnUiThread(new Runnable() {
+                Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         buttonSend.setVisibility(View.VISIBLE);
@@ -803,25 +781,14 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-                final String eString = e.toString();
-                MainActivity.this.runOnUiThread(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        Toast.makeText(MainActivity.this, eString, Toast.LENGTH_LONG).show();
-                    }
-
-                });
             } catch (IOException e) {
                 e.printStackTrace();
                 final String eString = e.toString();
-                MainActivity.this.runOnUiThread(new Runnable() {
+                getActivity().runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, eString, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "ERROR:\n"+eString, Toast.LENGTH_LONG).show();
                     }
 
                 });
@@ -835,9 +802,10 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
-                    runOnUiThread(new Runnable() {
+                    getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            Toast.makeText(getActivity(), "Invalid Connection", Toast.LENGTH_LONG).show();
                             buttonSend.setVisibility(View.GONE);
                             buttonConnect.setText("CONNECT");
                             buttonConnect.setEnabled(true);
@@ -867,7 +835,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
-
-

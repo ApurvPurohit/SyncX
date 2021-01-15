@@ -20,12 +20,11 @@
         android:orientation="vertical"
         android:visibility="visible" >
 
-        <EditText
-            android:id="@+id/username"
+        <Button
+            android:id="@+id/scanbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User name"
-            android:text="navdeep " />
+            android:text="SCAN " />
 
         <EditText
             android:id="@+id/address"
