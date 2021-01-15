@@ -1,3 +1,5 @@
+<img src="https://github.com/ApurvPurohit/SyncX/blob/master/Documentation/Logo.png" width="20%"></img>
+
 # *SyncX - File Transfer Utility*
 
 A File Transfer Application for the seamless tranfer of single/multiple files between PC and Android Devices without any physical connection. This utility is under improvement and your feedback/contribution on any aspect will be appreciated. 
@@ -36,6 +38,10 @@ ipconfig
 
 ### Changing configuration
 To change the configuration parameters, you can modify the *configuration.json* file and save the changes.
+
+## Screenshots - SyncX Android App
+
+![alt text](https://github.com/ApurvPurohit/SyncX/blob/master/Documentation/SyncX.png)
 
 ## Acknowledgments
 
