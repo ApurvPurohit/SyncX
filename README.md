@@ -39,10 +39,10 @@ ipconfig
 ### Changing configuration
 To change the configuration parameters, you can modify the *configuration.json* file and save the changes.
 
-## Screenshots - SyncX Android App
+## SyncX Android App
 
 ![alt text](https://github.com/ApurvPurohit/SyncX/blob/master/Documentation/SyncX.png)
 
-## Acknowledgments
+## Acknowledgment
 
 * [Dr. Naveen Sharma](https://www.rit.edu/directory/nxsvse-naveen-sharma)
